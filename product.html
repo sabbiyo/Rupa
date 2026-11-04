@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detail produk — RUPA</title>
+<meta name="description" content="Detail produk RUPA: bahan, ukuran, perawatan, dan pengiriman.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316130f'/><text x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23f7f4ee' text-anchor='middle'>R</text></svg>">
+</head>
+<body data-page="product">
+<a class="skip" href="#main">Lewati ke konten</a>
+
+<div class="announce">
+  <div class="wrap announce__inner">
+    <span>Gratis pengiriman untuk pesanan di atas Rp 500.000</span>
+    <span class="sep hide-sm"></span>
+    <span class="hide-sm">Retur gratis 30 hari</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header__inner">
+    <button class="icon-btn menu-btn" data-menu-open aria-label="Buka menu">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="index.html">RUPA<span>.</span></a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="shop.html" aria-current="page">Semua produk</a>
+      <a href="shop.html?category=pakaian">Pakaian</a>
+      <a href="shop.html?category=rumah">Rumah</a>
+      <a href="index.html#cerita">Tentang</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" data-search-open aria-label="Cari produk">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="cart-btn" href="cart.html" data-cart-open aria-label="Buka keranjang">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span>Keranjang</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" id="pdpCrumbs" aria-label="Breadcrumb"></nav>
+    <div class="pdp" id="pdpRoot"></div>
+  </div>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow"><span class="dot"></span>Lengkapi koleksi</p>
+          <h2 class="section__title" style="margin-top:10px">Anda mungkin <em>suka</em></h2>
+        </div>
+        <a class="link-arrow" href="shop.html">Semua produk →</a>
+      </div>
+      <div class="grid grid--4" id="relatedGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">RUPA<span>.</span></a>
+        <p>Benda harian dari bahan alami, dibuat dalam jumlah kecil di Indonesia.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Belanja</h4>
+        <ul>
+          <li><a href="shop.html">Semua produk</a></li>
+          <li><a href="shop.html?category=pakaian">Pakaian</a></li>
+          <li><a href="shop.html?category=rumah">Rumah</a></li>
+          <li><a href="shop.html?category=aksesori">Aksesori</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="#">Panduan ukuran</a></li>
+          <li><a href="#">Pengiriman</a></li>
+          <li><a href="#">Retur &amp; penukaran</a></li>
+          <li><a href="#">Hubungi kami</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="index.html#cerita">Tentang RUPA</a></li>
+          <li><a href="#">Jurnal</a></li>
+          <li><a href="#">Kebijakan privasi</a></li>
+          <li><a href="#">Syarat &amp; ketentuan</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 RUPA Studio. Demo frontend — tanpa backend.</span>
+      <div class="pay" aria-label="Metode pembayaran">
+        <span>BCA</span><span>MANDIRI</span><span>BNI</span><span>GOPAY</span><span>OVO</span><span>QRIS</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

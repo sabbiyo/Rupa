@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keranjang — RUPA</title>
+<meta name="description" content="Keranjang belanja RUPA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316130f'/><text x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23f7f4ee' text-anchor='middle'>R</text></svg>">
+</head>
+<body data-page="cart">
+<a class="skip" href="#main">Lewati ke konten</a>
+
+<div class="announce">
+  <div class="wrap announce__inner">
+    <span>Gratis pengiriman untuk pesanan di atas Rp 500.000</span>
+    <span class="sep hide-sm"></span>
+    <span class="hide-sm">Retur gratis 30 hari</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header__inner">
+    <button class="icon-btn menu-btn" data-menu-open aria-label="Buka menu">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="index.html">RUPA<span>.</span></a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="shop.html">Semua produk</a>
+      <a href="shop.html?category=pakaian">Pakaian</a>
+      <a href="shop.html?category=rumah">Rumah</a>
+      <a href="index.html#cerita">Tentang</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" data-search-open aria-label="Cari produk">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="cart-btn" href="cart.html" data-cart-open aria-label="Buka keranjang">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span>Keranjang</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Beranda</a><span>/</span><span style="color:var(--ink)">Keranjang</span>
+    </nav>
+    <div class="page-head" style="border:0;padding-top:14px;padding-bottom:0">
+      <h1>Keranjang</h1>
+    </div>
+    <div class="cart-layout" id="cartRoot"></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="border-top:0;padding-top:0">
+      <span>© 2026 RUPA Studio. Demo frontend — tanpa backend.</span>
+      <div class="pay" aria-label="Metode pembayaran">
+        <span>BCA</span><span>MANDIRI</span><span>BNI</span><span>GOPAY</span><span>OVO</span><span>QRIS</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toko — RUPA</title>
+<meta name="description" content="Jelajahi semua produk RUPA: pakaian linen, keramik, aksesori kulit, alas kaki, dan perlengkapan rumah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316130f'/><text x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23f7f4ee' text-anchor='middle'>R</text></svg>">
+</head>
+<body data-page="shop">
+<a class="skip" href="#main">Lewati ke konten</a>
+
+<div class="announce">
+  <div class="wrap announce__inner">
+    <span>Gratis pengiriman untuk pesanan di atas Rp 500.000</span>
+    <span class="sep hide-sm"></span>
+    <span class="hide-sm">Retur gratis 30 hari</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header__inner">
+    <button class="icon-btn menu-btn" data-menu-open aria-label="Buka menu">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="index.html">RUPA<span>.</span></a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="shop.html" aria-current="page">Semua produk</a>
+      <a href="shop.html?category=pakaian">Pakaian</a>
+      <a href="shop.html?category=rumah">Rumah</a>
+      <a href="index.html#cerita">Tentang</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" data-search-open aria-label="Cari produk">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="cart-btn" href="cart.html" data-cart-open aria-label="Buka keranjang">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span>Keranjang</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb" style="padding-top:0">
+        <a href="index.html">Beranda</a><span>/</span><span style="color:var(--ink)">Toko</span>
+      </nav>
+      <h1>Semua produk</h1>
+      <p>Dua belas benda pilihan dari empat studio. Bahan alami, produksi kecil,
+      dibuat untuk dipakai bertahun-tahun.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="shop">
+      <aside class="filters" id="filters" aria-label="Filter produk">
+        <div class="filter-group">
+          <h3>Kategori</h3>
+          <ul id="catFilters"></ul>
+        </div>
+
+        <div class="filter-group">
+          <h3>Harga maksimum</h3>
+          <input class="range" type="range" id="priceRange" min="100000" max="700000" step="50000" value="700000" aria-label="Harga maksimum">
+          <div class="range-value"><span>Rp 100.000</span><span id="priceValue">Rp 700.000</span></div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Lainnya</h3>
+          <label class="check">
+            <input type="checkbox" id="saleFilter">
+            <span>Hanya yang diskon</span>
+          </label>
+        </div>
+
+        <button class="filter-reset" id="shopReset">Reset semua filter</button>
+      </aside>
+
+      <div class="shop__main">
+        <div class="toolbar">
+          <span class="toolbar__count" id="shopCount" aria-live="polite">12 produk</span>
+          <button class="btn btn--ghost btn--sm filter-toggle" id="filterToggle">Filter</button>
+          <div class="toolbar__right">
+            <div class="search-field">
+              <svg class="icon icon--sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input type="search" id="shopSearch" placeholder="Cari produk…" aria-label="Cari produk">
+            </div>
+            <select class="select" id="shopSort" aria-label="Urutkan produk">
+              <option value="featured">Paling relevan</option>
+              <option value="price-asc">Harga terendah</option>
+              <option value="price-desc">Harga tertinggi</option>
+              <option value="rating">Rating tertinggi</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="active-chips" id="activeChips" hidden></div>
+
+        <div class="grid grid--3" id="shopGrid"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="border-top:0;padding-top:0">
+      <span>© 2026 RUPA Studio. Demo frontend — tanpa backend.</span>
+      <div class="pay" aria-label="Metode pembayaran">
+        <span>BCA</span><span>MANDIRI</span><span>BNI</span><span>GOPAY</span><span>OVO</span><span>QRIS</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

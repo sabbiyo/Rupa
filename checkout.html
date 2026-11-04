@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pembayaran — RUPA</title>
+<meta name="description" content="Selesaikan pesanan RUPA: data pengiriman dan metode pembayaran.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2316130f'/><text x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23f7f4ee' text-anchor='middle'>R</text></svg>">
+</head>
+<body data-page="checkout">
+<a class="skip" href="#main">Lewati ke konten</a>
+
+<div class="announce">
+  <div class="wrap announce__inner">
+    <span>Pembayaran aman &amp; terenkripsi</span>
+    <span class="sep hide-sm"></span>
+    <span class="hide-sm">Demo frontend — tidak ada transaksi nyata</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header__inner">
+    <button class="icon-btn menu-btn" data-menu-open aria-label="Buka menu">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="index.html">RUPA<span>.</span></a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="shop.html">Semua produk</a>
+      <a href="shop.html?category=pakaian">Pakaian</a>
+      <a href="shop.html?category=rumah">Rumah</a>
+      <a href="index.html#cerita">Tentang</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" data-search-open aria-label="Cari produk">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a class="cart-btn" href="cart.html" data-cart-open aria-label="Buka keranjang">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span>Keranjang</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Beranda</a><span>/</span>
+      <a href="cart.html">Keranjang</a><span>/</span><span style="color:var(--ink)">Pembayaran</span>
+    </nav>
+    <div class="page-head" style="border:0;padding-top:14px;padding-bottom:0">
+      <h1>Pembayaran</h1>
+      <p>Lengkapi data pengiriman. Pesanan dikirim dalam 1 × 24 jam kerja dari Yogyakarta.</p>
+    </div>
+
+    <div class="checkout" id="checkoutRoot">
+      <form id="checkoutForm" novalidate>
+        <div class="panel">
+          <h2><span class="num">1</span>Data kontak</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fName">Nama lengkap</label>
+              <input class="input" id="fName" name="name" type="text" autocomplete="name" placeholder="Nama sesuai identitas">
+              <span class="field__error">Masukkan nama minimal 3 karakter.</span>
+            </div>
+            <div class="field">
+              <label for="fEmail">Email</label>
+              <input class="input" id="fEmail" name="email" type="email" autocomplete="email" placeholder="nama@email.com">
+              <span class="field__error">Format email belum benar.</span>
+            </div>
+            <div class="field field--full">
+              <label for="fPhone">Nomor telepon</label>
+              <input class="input" id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="08xx xxxx xxxx">
+              <span class="field__error">Masukkan nomor telepon yang valid.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2><span class="num">2</span>Alamat pengiriman</h2>
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="fAddress">Alamat lengkap</label>
+              <textarea id="fAddress" name="address" autocomplete="street-address" placeholder="Jalan, nomor rumah, RT/RW, kecamatan"></textarea>
+              <span class="field__error">Alamat terlalu singkat, tambahkan detail.</span>
+            </div>
+            <div class="field">
+              <label for="fCity">Kota / kabupaten</label>
+              <input class="input" id="fCity" name="city" type="text" autocomplete="address-level2" placeholder="Yogyakarta">
+              <span class="field__error">Masukkan nama kota.</span>
+            </div>
+            <div class="field">
+              <label for="fProvince">Provinsi</label>
+              <select id="fProvince" name="province" autocomplete="address-level1">
+                <option>DI Yogyakarta</option>
+                <option>DKI Jakarta</option>
+                <option>Jawa Barat</option>
+                <option>Jawa Tengah</option>
+                <option>Jawa Timur</option>
+                <option>Bali</option>
+                <option>Sumatera Utara</option>
+                <option>Sulawesi Selatan</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fZip">Kode pos</label>
+              <input class="input" id="fZip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="55123" maxlength="5">
+              <span class="field__error">Kode pos terdiri dari 5 angka.</span>
+            </div>
+            <div class="field">
+              <label for="fNotes">Catatan kurir (opsional)</label>
+              <input class="input" id="fNotes" name="notes" type="text" placeholder="Contoh: titip ke pos keamanan">
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2><span class="num">3</span>Metode pembayaran</h2>
+          <div class="pay-methods">
+            <label class="pay-method">
+              <input type="radio" name="payment" value="Transfer bank" checked>
+              <span><b>Transfer bank</b><small>BCA, Mandiri, BNI — verifikasi otomatis</small></span>
+              <span class="tag">Populer</span>
+            </label>
+            <label class="pay-method">
+              <input type="radio" name="payment" value="E-wallet">
+              <span><b>E-wallet</b><small>GoPay, OVO, DANA, ShopeePay</small></span>
+            </label>
+            <label class="pay-method">
+              <input type="radio" name="payment" value="Kartu kredit">
+              <span><b>Kartu kredit / debit</b><small>Visa, Mastercard, JCB</small></span>
+            </label>
+            <label class="pay-method">
+              <input type="radio" name="payment" value="QRIS">
+              <span><b>QRIS</b><small>Pindai dengan aplikasi bank atau e-wallet apa pun</small></span>
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn--primary btn--block" type="submit" style="height:52px;margin-top:18px">
+          Buat pesanan
+        </button>
+        <p class="summary__note" style="justify-content:center;margin-top:14px">
+          Dengan menekan “Buat pesanan”, kamu menyetujui syarat &amp; ketentuan kami.
+          Demo ini tidak memproses pembayaran nyata.
+        </p>
+      </form>
+
+      <aside class="summary">
+        <h2>Pesananmu</h2>
+        <div id="checkoutSummary"></div>
+        <div class="promo" style="margin-top:4px">
+          <input class="input" id="checkoutPromo" placeholder="Kode promo" aria-label="Kode promo">
+          <button class="btn btn--sm" type="button" id="checkoutPromoBtn">Pakai</button>
+        </div>
+        <a class="link-arrow" href="cart.html" style="font-size:.82rem">← Ubah keranjang</a>
+        <hr style="border:0;border-top:1px solid var(--line);margin:2px 0">
+        <p class="summary__note">
+          <svg class="icon icon--sm" viewBox="0 0 24 24" style="flex:none;margin-top:2px"><path d="M12 3.5 19 6v6c0 4-3 7-7 8.5C8 19 5 16 5 12V6l7-2.5Z"/><path d="m9.5 12 1.8 1.8L15 10"/></svg>
+          Pembayaran diproses secara aman. Kami tidak menyimpan data kartu.
+        </p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="border-top:0;padding-top:0">
+      <span>© 2026 RUPA Studio. Demo frontend — tanpa backend.</span>
+      <div class="pay" aria-label="Metode pembayaran">
+        <span>BCA</span><span>MANDIRI</span><span>BNI</span><span>GOPAY</span><span>OVO</span><span>QRIS</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
